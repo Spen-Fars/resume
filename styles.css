@@ -1,5 +1,9 @@
 body {
     margin: 0;
-    background: plum;
+    background: white;
     text-align: center;
+}
+title {
+    text-align: center;
+    margin-left: -5px;
 }
