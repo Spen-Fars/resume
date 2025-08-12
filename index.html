@@ -1,14 +1,178 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spencer Farley's Resume Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <title>Spencer Farley</title>
-    
-    <a href="/resume/contact.html">contact</a>
-    <p>what's up</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full Name — Resume</title>
+    <meta name="description" content="Full Name — Role / Short tagline. Downloadable resume and portfolio." />
+
+    <!-- Basic styles (replace with your CSS / framework) -->
+    <style>
+      :root{--max-width:1100px;--accent:#0a84ff;--muted:#666}
+      html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:#111}
+      .site{max-width:var(--max-width);margin:0 auto;padding:24px}
+      header{display:flex;align-items:center;justify-content:space-between}
+      nav a{margin-left:16px;text-decoration:none;color:inherit}
+      .hero{display:flex;gap:24px;align-items:center;margin-top:28px}
+      .avatar{width:140px;height:140px;border-radius:12px;background:#eee}
+      section{margin-top:36px}
+      h2{margin:0 0 12px 0}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+      .card{padding:16px;border-radius:10px;background:#fafafa}
+      footer{margin-top:48px;padding-top:18px;border-top:1px solid #eee;color:var(--muted)}
+      /* Print: hide non-essential UI */
+      @media print{nav, .download-btn{display:none}}
+    </style>
+
+    <!-- Structured data for richer search results (adjust values) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Full Name",
+      "jobTitle":"Senior Software Engineer",
+      "url":"https://yourdomain.com",
+      "sameAs":["https://github.com/username","https://linkedin.com/in/username"]
+    }
+    </script>
+  </head>
+  <body>
+    <div class="site">
+      <!-- Header / Nav -->
+      <header>
+        <div>
+          <h1 style="margin:0;">Full Name</h1>
+          <div style="color:var(--muted);">Role • Location • Email</div>
+        </div>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Hero / Summary -->
+      <section class="hero" id="about">
+        <div style="flex:1">
+          <p style="margin:0;color:var(--muted)">A short (2–3 line) professional summary that highlights your expertise, years of experience, and what you bring to teams or projects.</p>
+
+          <!-- Quick facts / CTA -->
+          <p style="margin-top:12px">
+            <strong>Key skills:</strong> JavaScript, React, Node.js • <strong>Open to:</strong> Full-time / Contract
+          </p>
+
+          <p style="margin-top:16px">
+            <a class="download-btn" href="/resume.pdf" download>Download PDF</a>
+            &nbsp;|&nbsp;
+            <a href="#contact">Hire me</a>
+          </p>
+        </div>
+
+        <div class="avatar" role="img" aria-label="Portrait of Full Name">
+          <!-- Replace with an <img> and real photo -->
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="grid">
+          <!-- Repeat one .card per role -->
+          <article class="card" aria-labelledby="role-1">
+            <h3 id="role-1">Senior Software Engineer — Company Name</h3>
+            <p style="margin:6px 0;color:var(--muted)">Jan 2021 — Present • San Francisco, CA</p>
+            <ul>
+              <li>What you built or owned (quantify with numbers when possible).</li>
+              <li>Impact: reduced X by Y% — improved throughput, performance, engagement.</li>
+              <li>Tech: React, TypeScript, GraphQL, AWS.</li>
+            </ul>
+          </article>
+
+          <!-- more roles... -->
+        </div>
+      </section>
+
+      <!-- Projects / Selected Work -->
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Project Title</h3>
+            <p style="margin:6px 0;color:var(--muted)">Short 1-line description + link</p>
+            <p>Brief bullets describing your role, outcome, and tech stack.</p>
+          </div>
+          <!-- more projects -->
+        </div>
+      </section>
+
+      <!-- Skills & Tools -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <p style="color:var(--muted)">Organize by category — Languages, Frameworks, Tools, Design, Data, etc.</p>
+        <div class="grid">
+          <div class="card"><strong>Languages</strong><p>JavaScript, TypeScript, Python, SQL</p></div>
+          <div class="card"><strong>Frameworks</strong><p>React, Next.js, Node.js</p></div>
+          <div class="card"><strong>Tools</strong><p>Git, Docker, AWS</p></div>
+        </div>
+      </section>
+
+      <!-- Education / Certifications -->
+      <section id="education">
+        <h2>Education & Certifications</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>University Name — Degree</h3>
+            <p style="color:var(--muted);margin:6px 0">2015 — 2019</p>
+            <p>Any honors, thesis title, relevant coursework.</p>
+          </div>
+          <!-- certificates -->
+        </div>
+      </section>
+
+      <!-- Testimonials (optional) -->
+      <section id="testimonials">
+        <h2>Recommendations</h2>
+        <div class="grid">
+          <blockquote class="card">“Short quote from a manager/peer with name & role.”</blockquote>
+        </div>
+      </section>
+
+      <!-- Contact / Footer -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p style="color:var(--muted)">Email: <a href="mailto:you@example.com">you@example.com</a> • LinkedIn / GitHub / Twitter</p>
+        <form action="/contact" method="post" style="margin-top:12px">
+          <label for="msg">Message</label><br />
+          <textarea id="msg" name="message" rows="4" style="width:100%"></textarea>
+          <div style="margin-top:8px"><button type="submit">Send</button></div>
+        </form>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> Full Name — Built with HTML • Print-friendly</p>
+      </footer>
+    </div>
+
+    <script>
+      // Small JS helpers: inject year, smooth-scroll, and accessible keyboard nav hooks
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Smooth scroll for nav anchors
+      document.querySelectorAll('nav a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          const id = a.getAttribute('href').slice(1);
+          document.getElementById(id).scrollIntoView({behavior:'smooth'});
+        });
+      });
+    </script>
+
+    <!-- Notes for customization:
+         - Replace placeholder text and avatar with real content
+         - Swap styles for your preferred framework (Tailwind, Bootstrap, etc.)
+         - Consider adding analytics, hreflang, and OpenGraph tags for social previews
+         - Create a printed PDF variant using @media print rules or a server-generated resume.pdf
+    -->
+  </body>
 </html>
