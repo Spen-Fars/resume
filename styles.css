@@ -7,7 +7,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: Inter, system-ui, Segoe UI, Arial,sans-serif;
+    font-family: Inter, system-ui, Segoe UI, 'Times New Roman', Times, serif;
     color: #111;
 }
 .site {
@@ -45,7 +45,7 @@ h2 {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 16px;
 }
 .card {
